@@ -1,0 +1,13 @@
+# Python 3.9 or older (DeepSpeech 0.9.3 has no builds for newer versions)
+deepspeech==0.9.3      # on the Raspberry Pi this is the TFLite build, use the .tflite model
+numpy
+scipy
+pyaudio
+webrtcvad
+halo
+noisereduce
+soundfile
+matplotlib
+jiwer
+# Raspberry Pi only:
+# RPi.GPIO

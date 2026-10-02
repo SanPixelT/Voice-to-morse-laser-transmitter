@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# DeepSpeech models (too big for GitHub - download them, see README)
+*.pbmm
+*.tflite
+*.scorer
+
+# datasets and recordings
+data/
+*.wav
+
+Thumbs.db
+desktop.ini
+.DS_Store
