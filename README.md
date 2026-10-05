@@ -97,8 +97,8 @@ To redo the accuracy test:
 
 The original files are in `original/`. In the cleaned-up versions I:
 
-- **Fixed a pin bug in the Pi script.** Dots were sent on GPIO 17, but only pin 22 was set up, so dots probably never reached the laser.
-- **Moved `GPIO.cleanup()` to the end.** It used to run after the first message, so a second message would fail. This would run normally if testing one by one messages, for the sake of simpicity.
+- **Fixed a pin bug in the Pi script.** In the code I pasted into the report, dots were sent on GPIO 17 while only pin 22 was set up as the laser output. I used the correct pin during testing. The cleaned-up script uses pin 22 for everything.
+- **Moved `GPIO.cleanup()` to the end.** It used to run after the first message, so a second message would fail. This didn't matter when testing one message at a time.
 - **Made `translate()` skip characters** that have no Morse code instead of crashing. I also fixed the apostrophe, which was mapped to `.`.
 - **Turned the with/without noise reduction switch into a `NOISE_REDUCE` setting**, instead of editing the code by hand each time.
 - **Replaced hard-coded `C:\Users\...` paths** with relative ones, and removed debug prints and commented-out code.
